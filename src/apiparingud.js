@@ -99,12 +99,12 @@ async function handleFormSubmit(event) {
 }
 
 async function listiraamatud() {
-    const responseData = await getDataAsJson("http://hs9-flask-api-raamatud-emfngyejhddfc0ev.northeurope-01.azurewebsites.net/raamatud/");
+    const responseData = await getDataAsJson("https://hs9-flask-api-raamatud-emfngyejhddfc0ev.northeurope-01.azurewebsites.net/raamatud/");
     const resultElement = document.getElementById("raamatud_result");
     resultElement.innerHTML = ""
     for (var raamat of responseData.raamatud){
-            resultElement.innerHTML += '<a href="http://hs9-flask-api-raamatud-emfngyejhddfc0ev.northeurope-01.azurewebsites.net/raamatud/'+raamat+'"  download="'+raamat+'.txt" >' +raamat+".txt</a> " +
-                        '<a href="#" onclick="deleteObject(\'http://hs9-flask-api-raamatud-emfngyejhddfc0ev.northeurope-01.azurewebsites.net/raamatud/'+raamat+'\')" > [kustuta]</a>' +
+            resultElement.innerHTML += '<a href="https://hs9-flask-api-raamatud-emfngyejhddfc0ev.northeurope-01.azurewebsites.net/raamatud/'+raamat+'"  download="'+raamat+'.txt" >' +raamat+".txt</a> " +
+                        '<a href="#" onclick="deleteObject(\'https://hs9-flask-api-raamatud-emfngyejhddfc0ev.northeurope-01.azurewebsites.net/raamatud/'+raamat+'\')" > [kustuta]</a>' +
                         "<br />";
     }
 
